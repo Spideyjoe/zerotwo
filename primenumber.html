@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Prime Number</title>
+<link rel="stylesheet" href="teststyle.css" type="text/css">
+<script>
+
+function displayDetails()
+{
+  var num=document.getElementById("number").value;
+  document.getElementById("prime").innerHTML=res;
+
+   for (var pn=2; pn<=num; pn++)
+{
+    var prime=true;
+   for(var i=2;i<pn;i++)
+{
+   if(pn%==0)
+{
+  prime=false;
+}
+{
+if(prime==true)
+{
+res=res+","+pn
+document.getElementById("prime").innerHTML=num;
+}
+}
+  if(i==j)
+}
+}
+</script>
+</head>
+<body>
+<table class="headertable">
+<tr class="thead">
+<td>
+<a class="h" href="home.html">HOME</a> 
+<a class="h" href="cu.html">Contact Us</a>
+<a class="h" href="regnow.html">Register</a>
+<a class="h" href="jscriptsample.html">JavaScript</a>
+</td>
+</tr>
+<tr class="trcontent">
+<td>
+<table border="4" width="100%" height="100%">
+<tr>
+<td width="10%"; valign="top";>
+<a style=color:red; href="jschangetextcolor.html">Change Text color</a><br><hr>
+<a style=color:red; href="jsbgchange.html">Change Bg</a><br><hr>
+<a style=color:red; href="form.html">Print given values</a><br><hr>
+<a style=color:red; href="testing.html">Greater Value</a><br><hr>
+<a style=color:red; href="switch.html">Switch</a><br><hr>
+<a style=color:red; href="primenumber.html">Prime Number</a><br><hr>
+<a style=color:red; href="polindrome.html">Polindrome</a><br><hr>
+<a style=color:red; href="amstrong.html">Amstrong</a><br><hr>
+</td>
+<td style=color:white; valign="top";>
+<p>
+<input type="text" id="number">
+<input type="button" onclick="displayDetails()"; value="submit" >
+</p>
+<p id="prime">The prime numbers:</p></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr class="footer">
+<td><p class="pfooter">JavaScript Samples</p></td>
+</tr>
+</table>
+</body>
+</html

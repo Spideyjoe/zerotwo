@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Amstrong</title>
+<link rel="stylesheet" href="teststyle.css" type="text/css">
+</head>
+<script>
+function amstrong()
+{
+    var a=document.getElementById("no").value;
+
+    var temp=a;
+    var sum=0;
+    
+    var numberOfDigits=num.length;
+
+while (temp > 0)
+{
+var remainder = ams % 10;
+
+sum += remainder** numberOfDigits;
+
+temp = parseInt(temp/10);
+}
+
+    if (sum==num)
+      
+     {
+       document.getElementById("res").innerHTML="This is an Amstrong Number";
+     }
+     
+     else
+       {
+        document.getElementById("res").innerHTML="This is not an Amstrong Number"; 
+      }
+}
+
+</script>
+<body>
+<table class="headertable">
+<tr class="thead">
+<td>
+<a class="h" href="home.html">HOME</a> 
+<a class="h" href="cu.html">Contact Us</a>
+<a class="h" href="regnow.html">Register</a>
+<a class="h" href="jscriptsample.html">JavaScript</a>
+</td>
+</tr>
+<tr class="trcontent">
+<td>
+<table border="4" width="100%" height="100%">
+<tr>
+<td width="10%"; valign="top";>
+<a style=color:red; href="jschangetextcolor.html">Change Text color</a><br><hr>
+<a style=color:red; href="jsbgchange.html">Change Bg</a><br><hr>
+<a style=color:red; href="form.html">Print Given Values</a><br><hr>
+<a style=color:red; href="testing.html">Greater Value</a><br><hr>
+<a style=color:red; href="switch.html">Switch</a><br><hr>
+<a style=color:red; href="primenumber.html">Prime Number</a><br><hr>
+<a style=color:red; href="polindrome.html">Polindrome</a><br><hr>
+<a style=color:red; href="amstrong.html">Amstrong</a><br><hr>
+</td>
+<td style=color:white; valign="top";>
+<center>
+<p>Give number: <input type="text" id="no"></p>
+<p><input type="button" id="submit" onClick="amstrong()"; value="check"/></p>
+<br/>
+<p id="res"></p>
+</center></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="footer">
+<td><p class="pfooter">JavaScript Sample</p></td>
+</tr>
+</table>
+</body>
+</html>

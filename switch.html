@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Switch Case-JS</title>
+</head>
+<link rel="stylesheet" href="teststyle.css" type="text/css">
+<script>
+function calculate(cal)
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);
+var result=document.getElementsByTagName("button").value;
+document.getElementById("res").innerHTML="";
+
+switch(cal)
+{
+ case "add":
+ document.getElementById("res").innerHTML=a+b;
+ break;
+ 
+ case "sub":
+ document.getElementById("res").innerHTML=a-b;
+ break;
+ }
+ }
+</script>
+<body>
+<table class="headertable">
+<tr class="thead">
+<td>
+<a class="h" href="home.html">HOME</a>
+<a class="h" href="cu.html">Contac Us</a>
+<a class="h" href="regnow.html">Register</a>
+<a class="h" href="jscriptsample.html">JavaScript</a>
+</td>
+</tr>
+<tr class="trcontent">
+<td>
+<table border="4" width="100%" height="100%">
+<tr>
+<td width="10%"; valign="top";>
+<a style=color:red; href="jschangetextcolor.html">Change Text color</a><br><hr>
+<a style=color:red; href="jsbgchange.html">Change Bg</a><br><hr>
+<a style=color:red; href="form.html">Print given values</a><br><hr>
+<a style=color:red; href="testing.html">Greater Value</a><br><hr>
+<a style=color:red; href="switch.html">Switch</a><br><hr>
+<a style=color:red; href="primenumber.html">Prime Number</a><br><hr>
+<a style=color:red; href="polindrome.html">Polindrome</a><br><hr>
+<a style=color:red; href="amstrong.html">Amstrong</a><br><hr>
+
+</td>
+<td  style=color:white; valign="top";id="background">
+<center>
+A : <input type="text" id="a">
+B : <input type="text" id="b"><br>
+<br>
+<input type="button" value="ADD" id="add" onclick="calculate('add')">
+<input type="button" value="SUB" id="add" onclick="calculate('sub')">
+<br>
+<br>
+<p id="res"></p>
+</center>
+</td>
+</tr>
+</table>
+<tr class="footer">
+<td><p class="pfooter">JavaScript Samples</p>
+</td>
+</tr>
+</table> 
+</body>
+</html>

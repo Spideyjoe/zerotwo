@@ -1,0 +1,16 @@
+.h{ text-decoration:none; color:black;font-size:15px; padding:15px;}
+body{ background-image:url("circlebg.jpg");margin:0px;}
+.headertable{border-size:5px; border:black; border-width:5px; border-style:solid; width:100%; height:100%;}
+.thead{background-color:lightgrey; height:10%; width:50px;}
+.trcontent{border:black; border-width:5px; border-style:solid; height:80%;}
+.footer{height:10%; background-color:lightgrey;color:white;}
+h2 {text-align: center;}
+.pfooter{color:black;font-size:20px;}
+table{border-collapse: collapse;}
+#submit:hover{background-color:green;}
+.regt{color:white;font-size:20px;}
+.wel{color:white;font-size:40px;}
+#txtcolorg:hover{background-color:green;}
+#txtcolorb:hover{background-color:blue;}
+#txtcolorw:hover{background-color:white;}
+#bgblack:hover{background-color:black;}

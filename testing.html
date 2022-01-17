@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>JavaScript Samples-Greater Value</title>
+<link rel="stylesheet" href="teststyle.css" type="text/css">
+<script>
+function getResult()
+{
+var a=parseInt(document.getElementById("A").value);
+var b=parseInt(document.getElementById("B").value);
+var c=parseInt(document.getElementById("C").value);
+if((a>b) && (c<a))
+{
+  alert("A is greater than B and C")
+}
+else if(c<b && b>a)
+{
+  alert("B is greater than A and C")
+}
+else if(c>a && b<c)
+{
+  alert("C is greater than A and B")
+}  
+else if(a==b && b==c)
+{
+  alert("All values same")
+}
+else if(a==b && a!=c)
+{
+  alert("A and B are same and greater than C")
+}
+else if(b==c && b!=a)
+{
+  alert("B and C are same and greater than A")
+}
+else if(c==a && c!=b)
+{
+  alert("A and C are same and greater than B")
+}
+}
+</script>
+</head>
+<body>
+<table class="headertable">
+<tr class="thead">
+<td>
+<a class="h" href="home.html">HOME</a>
+<a class="h" href="cu.html">Contac Us</a>
+<a class="h" href="regnow.html">Register</a>
+<a class="h" href="jscriptsample.html">JavaScript</a>
+</td>
+</tr>
+<tr class="trcontent">
+<td>
+<table border="4" width="100%" height="100%">
+<tr>
+<td width="10%"; valign="top";>
+<a style=color:red; href="jschangetextcolor.html">Change Text color</a><br><hr>
+<a style=color:red; href="jsbgchange.html">Change Bg</a><br><hr>
+<a style=color:red; href="form.html">Print given values</a><br><hr>
+<a style=color:red; href="testing.html">Greater Value</a><br><hr>
+<a style=color:red; href="switch.html">Switch</a><br><hr>
+<a style=color:red; href="primenumber.html">Prime Number</a><br><hr>
+<a style=color:red; href="polindrome.html">Polindrome</a><br><hr>
+<a style=color:red; href="amstrong.html">Amstrong</a><br><hr>
+
+</td>
+<td style=color:white; valign="top";id="background">
+<h2>Give Value</h2>
+<center><p>show the greater value</p>
+<p>
+A : <input type="text" id="A" /><br>
+B : <input type="text" id="B" /><br>
+C : <input type="text" id="C" /><br>
+<br>
+<input type="button"  onclick="getResult()"; id="submit" value="Result"/></p></center>
+</td>
+</tr>
+</table>
+<tr class="footer">
+<td><p class="pfooter">JavaScript Samples</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

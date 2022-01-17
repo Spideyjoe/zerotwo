@@ -1,0 +1,203 @@
+
+<html>
+<head>
+<title>Net Banking</title>
+<link rel="stylesheet" href="teststyle.css" type="text/css">
+</head>
+<style>
+#hidden1{display : none}
+#hidden2{display : none}
+#notice1{color:green}
+#notice2{color:red}
+</style>
+<script>
+
+var depositname = new Array();
+var depositamount = new Array();
+var withdrawname = new Array();
+var withdrawamount = new Array();
+       
+       var balance = 0;
+
+       function displayDetails()
+
+{
+    var a = document.getElementById("data1").value;
+    var b = parseInt(document.getElementById("data2").value);
+    var c = parseInt(document.getElementById("data3").value);
+    
+   
+ document.getElementById("show1").innerHTML = "";
+ document.getElementById("show2").innerHTML = "";
+ document.getElementById("show3").innerHTML = "";
+     balance = c;
+    document.getElementById("bal").innerHTML = "₹." +balance;
+    //document.getElementById("bal").innerHTML = "";
+ 
+
+ //document.getElementById("data1").style.display = "none";
+ //document.getElementById("data2").style.display = "none";
+ //document.getElementById("data3").style.display = "none";
+
+ //names[names.length]=document.getElementById("data1").value;
+//accno[accno.length]=document.getElementById("data2").value;
+ //amnt[amnt.length]=document.getElementById("data3").value;
+
+    document.getElementById("data1").value="";
+    document.getElementById("data2").value="";
+    document.getElementById("data3").value="";
+
+
+var result="<table border='1'><tr> <th>Name</th> <th>Account Number</th> <th>Initial Amount</th> </tr>";
+ 	for(var i=0;i<names.length;i++)
+ 	{
+    	//alert(names[i]);
+        result+="<tr> <td>"+names[i]+"</td> <td>"+accno[i]+"</td> <td>"+amnt[i]+"</td> </tr>";
+ 	}
+    result+="</table>";
+   document.getElementById("result").innerHTML=result;
+
+
+}
+
+
+     function depositbox()
+
+{
+
+   document.getElementById("hidden2").style.display = "none"
+   document.getElementById("hidden1").style.display = "block"
+
+}
+    function withdrawbox()
+
+{
+
+   document.getElementById("hidden1").style.display = "none"
+   document.getElementById("hidden2").style.display = "block"
+
+}
+      function cancel()
+
+{
+   document.getElementById("hidden1").style.display = "none"
+   document.getElementById("hidden2").style.display = "none"
+
+}
+
+
+
+    function deposit()
+
+{
+
+    var x = parseInt(document.getElementById("depbox").value);
+    var name = document.getElementById("nam").value;
+    
+    balance += x;
+    document.getElementById("bal").innerHTML = "₹." +balance;
+    document.getElementById("depbox").value ="";
+    document.getElementById("notice1").innerHTML ="Deposit Succesful ₹" +x;
+    document.getElementById("notice2").innerHTML = "Acc. Bal ₹" +balance;
+    document.getElementById("nam").value ="";
+ 
+ //names[names.length]=document.getElementById("data1").value;
+ //accno[accno.length]=document.getElementById("data2").value;
+
+ depositamount[depositamount.length]=x;
+depositname[depositname.length]=name;
+
+   var result2 = "<table border='1'><tr><th>Name</th><th>Deposited</th></tr>";
+   for (var i=0; i<depositamount.length; i++)
+
+  {
+    result2 += "<tr><td>"+depositname[i]+"</td>  <td>"+depositamount[i]+"</td> </tr>";
+   
+   }
+      result2 += "</table>";
+      document.getElementById("result3").innerHTML = result2;
+}
+    function withdraw()
+
+{
+     var x = parseInt(document.getElementById("widbox").value);
+     var name = document.getElementById("nam2").value;
+     balance1 = balance -x;
+  
+
+if(balance1 >=100)
+{
+    balance -=x;
+      document.getElementById("bal").innerHTML = "₹." +balance;
+      document.getElementById("widbox").value ="";
+      document.getElementById("notice1").innerHTML ="Withdraw Succesful -₹" +x;
+      document.getElementById("notice2").innerHTML = "Acc. Bal ₹" +balance;
+      document.getElementById("nam2").value ="";
+
+
+withdrawamount[withdrawamount.length]=x;
+withdrawname[withdrawname.length]=name;
+var result3 = "<table border='1'><tr><th>Name</th><th>withdraw</th></tr>";
+   for (var i=0; i<withdrawamount.length; i++)
+
+  {
+    result3 += "<tr><td>"+withdrawname[i]+"</td>  <td>"+withdrawamount[i]+"</td> </tr>";
+   
+   }
+      result3 += "</table>";
+      document.getElementById("result3").innerHTML = result3;
+}
+else
+{
+document.getElementById("widbox").value ="";
+document.getElementById("notice2").innerHTML = "Insufficient Funds, Acc Bal ₹" +balance;
+}
+}
+</script>
+<Body>
+
+
+<center><table  border="4"; >
+<tr><td height="29px"; width="100px";> Name </td>   <td width="200px";><input type="text" id="data1"><p id="show1"</p></td></tr>
+<tr><td height="29px"; width="100px";> Account No. </td>    <td width="200px";><input type="text" id="data2"><p id="show2"</p></td></tr>
+<tr><td height="29px"; width="100px";> Initial Amount </td>  <td width="200px";><input type="text" id="data3"><p id="show3"</p></td></tr>
+<tr height="50px"><td width="100px";> Balance </td>    <td width="200px";><p id="bal"></p></td></tr>
+
+<tr><td colspan="3" width="50px" >
+<input type="button" id="submit" onClick="displayDetails();" value="Submit"/>
+<input type="button" onClick="window.location.reload();" value="Refresh">
+</td></tr>
+<tr>
+<td colspan="3" "50px">
+<input type="button" id="button1" onClick="depositbox();" value="Deposit" />
+<input type="button" id="button2" onClick="withdrawbox();" value="Withdraw" />
+</td>
+</tr>
+
+<tr><td colspan="3" height="30px">
+<div id="hidden1">
+Name : <input type="text" id="nam"/><br/>
+Amount : <input type="text" id="depbox"/><br/>
+
+<input type="button" id="button3" onClick="deposit();" value="Deposit" />
+<input type="button" id="button4" onClick="cancel();" value="Cancel" />
+</div>
+
+<div id="hidden2">
+Name : <input type="text" id="nam2"><br/>
+Amount : <input type="text" id="widbox"/><br/>
+<input type="button" id="button5" onClick="withdraw();" value="withdraw" />
+<input type="button" id="button6" onClick="cancel();" value="Cancel" />
+</div>
+</td></tr>
+</table></center>
+<center><p id="notice1";>&zwnj;</p></center>
+<center><p id="notice2">&zwnj;</p></center>
+<div>
+<p id="result"></p>
+</div>
+<div>
+<p id="result3"></p>
+</div>
+</body>
+</html>
